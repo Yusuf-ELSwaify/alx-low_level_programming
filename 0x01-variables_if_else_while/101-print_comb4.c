@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	char i = '0', j, k;
+	int i = '0', j, k;
 
 	while (i <= '9')
 	{
