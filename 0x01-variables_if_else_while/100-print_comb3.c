@@ -13,7 +13,7 @@ int main(void)
 		while (j <= '9')
 		{
 			putchar(i);
-			putchar(j);
+			putchar(j++);
 			if (i == '8')/*at number 89 */
 				break;
 			putchar(',');
