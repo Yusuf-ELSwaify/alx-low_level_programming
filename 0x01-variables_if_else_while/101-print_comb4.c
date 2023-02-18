@@ -1,26 +1,31 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
  * Return:  0 (Success)
  */
 int main(void)
 {
-	for (char i = '0'; i <= '9'; i++)
+	char i = '0', j, k;
+
+	while (i <= '9')
 	{
-		for (char j = i+1; j <= '9'; j++)
+		j = i + 1;
+		while (j <= '9')
 		{
-			for (char k = j+1; k <= '9'; k++)
+			k = j + 1;
+			while (k <= '9')
 			{
 				putchar(i);
 				putchar(j);
-				putchar(k);
+				putchar(k++);
 				if (i == '7')/*at number 789 */
 					break;
 				putchar(',');
 				putchar(' ');
 			}
+			j++;
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);

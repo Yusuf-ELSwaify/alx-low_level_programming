@@ -6,8 +6,11 @@
  */
 int main(void)
 {
-	for (char c = '0'; c <= '9'; c++)
-	{	putchar(c);
+	char = '0';
+
+	while (c <= '9')
+	{
+		putchar(c++);
 		if (c == '9')
 			break;
 

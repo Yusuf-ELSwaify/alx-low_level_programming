@@ -6,8 +6,10 @@
  */
 int main(void)
 {
-	for (char c = 'z'; c >= 'a'; c--)
-		putchar(c);
+	char c = 'z';
+
+	while (c >= 'a')
+		putchar(c--);
 
 	putchar('\n');
 	return (0);

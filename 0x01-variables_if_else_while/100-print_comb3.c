@@ -1,14 +1,16 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
  * Return:  0 (Success)
  */
 int main(void)
 {
-	for (char i = '0'; i <= '9'; i++)
+	char i = '0', j;
+
+	while (i <= '9')
 	{
-		for (char j = i+1; j <= '9'; j++)
+		j = i + 1;
+		while (j <= '9')
 		{
 			putchar(i);
 			putchar(j);
@@ -17,6 +19,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);

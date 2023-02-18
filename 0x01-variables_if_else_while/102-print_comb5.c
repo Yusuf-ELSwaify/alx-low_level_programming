@@ -5,26 +5,33 @@
  */
 int main(void)
 {
-	for (char i = '0'; i <= '9'; i++)
+	char i = '0', j, k, l;
+
+	while (i <= '9')
 	{
-		for (char j = '0'; j <= '9'; j++)
+		j = '0';
+		while (j <= '9')
 		{
-			for (char k = i, l= j+1; k <= '9'; k++)
+			k = i, l = j + 1;
+			while (k <= '9')
 			{
-				for (; l <= '9'; l++)
+				while (l <= '9')
 				{	putchar(i);
 					putchar(j);
 					putchar(' ');
 					putchar(k);
-					putchar(l);
+					putchar(l++);
 					if (i == '9' && j == '8')/*at number 98 */
 						break;
 					putchar(',');
 					putchar(' ');
 				}
 				l = '0';
+				k++;
 			}
+			j++;
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);

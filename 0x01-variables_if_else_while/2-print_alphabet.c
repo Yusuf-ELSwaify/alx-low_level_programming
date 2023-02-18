@@ -1,12 +1,15 @@
 #include <stdio.h>
 /**
  * main - Entry point
+ * Description: print alphabets
  * Return:  0 (Success)
  */
 int main(void)
 {
-	for (char c = 'a'; c <= 'z'; c++)
-		putchar(c);
+	char c = 'a';
+
+	while (c <= 'z')
+		putchar(c++);
 
 	putchar('\n');
 	return (0);
