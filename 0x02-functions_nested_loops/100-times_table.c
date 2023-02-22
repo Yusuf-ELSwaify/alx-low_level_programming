@@ -4,10 +4,15 @@
  * @num: number to be formated
  * Return: void
  */
-void print_number(int num)
+void print_number(int num, int col)
 {
 	int i = 1000;
-
+	
+	if (col == 0)
+	{
+		_putchar('0' + num);
+		return;
+	}
 	while (i > 0)
 	{
 		_putchar(num / i != 0 || (num == 0 && i == 1) ? '0' + (num / i) % 10 : ' ');
@@ -24,19 +29,17 @@ void print_times_table(int n)
 	int fnum = 0, snum;
 
 	if (n > 15 || n < 0)
-	{
-		_putchar('\n');
 		return;
-	}
 
 	while (fnum <= n)
 	{
 		snum = 0;
 		while (1)
 		{
-			print_number(fnum * snum++);
-			if (snum > n)
+			print_number(fnum * snum, snum);
+			if (snum == n)
 				break;
+			snum++;
 			_putchar(',');
 		}
 		_putchar('\n');
