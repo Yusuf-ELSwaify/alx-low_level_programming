@@ -31,6 +31,7 @@ void print_to_98(int n)
 		if (n == 98)
 			break;
 		_putchar(',');
+		_putchar(' ');
 		if (n > 98)
 			n--;
 		else
