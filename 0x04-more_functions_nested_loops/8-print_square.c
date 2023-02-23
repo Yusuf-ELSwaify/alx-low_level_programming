@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_diagonal - draw a square size n
+ * print_square - draw a square size n
  * @n: the size of the square
  * Return: void
  */
