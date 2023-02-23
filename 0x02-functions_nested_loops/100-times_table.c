@@ -2,12 +2,13 @@
 /**
  * print_number - print formated number
  * @num: number to be formated
+ * @col: the number of column to remove the empty spaces of first column
  * Return: void
  */
 void print_number(int num, int col)
 {
 	int i = 1000;
-	
+
 	if (col == 0)
 	{
 		_putchar('0' + num);
