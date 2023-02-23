@@ -30,9 +30,9 @@ void times_table(void)
 		while (1)
 		{
 			print_number(fnum * snum, snum);
-			snum++;
 			if (snum == 9)
 				break;
+			snum++;
 			_putchar(',');
 		}
 		_putchar('\n');
