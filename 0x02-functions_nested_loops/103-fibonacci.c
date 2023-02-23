@@ -11,7 +11,7 @@ long fibonacci(int num, long fibonnaci_numbers[])
 	long fnum, snum;
 
 	if (num == 1)
-		return (0);
+		return (1);
 	if (num == 2)
 		return (2);
 
@@ -20,8 +20,6 @@ long fibonacci(int num, long fibonnaci_numbers[])
 	else
 	{
 		fnum = fibonacci(num - 1, fibonnaci_numbers);
-		if (fnum % 2 != 0)
-			fnum = 0;
 		fibonnaci_numbers[num - 1] = fnum;
 	}
 	if (fibonnaci_numbers[num - 2] != 0)
@@ -29,8 +27,6 @@ long fibonacci(int num, long fibonnaci_numbers[])
 	else
 	{
 		snum =  fibonacci(num - 2, fibonnaci_numbers);
-		if (snum % 2 != 0)
-			snum = 0;
 		fibonnaci_numbers[num - 2] = snum;
 	}
 	return (fnum + snum);
@@ -42,16 +38,16 @@ long fibonacci(int num, long fibonnaci_numbers[])
 int main(void)
 {
 	long fibonnaci_numbers[53] = {0};
-	int i = 0;
+	int i = 0, sum = 0, current_fib = 0;
 
 	while (1)
 	{
-		printf("%ld", fibonacci(++i, fibonnaci_numbers));
-		if (i == 50)
+		current_fib = fibonacci(++i, fibonnaci_numbers);
+		if (current_fib >= 4000000)
 			break;
-		putchar(',');
-		putchar(' ');
+		if ((current_fib & 1) == 0)
+			sum += current_fib;
 	}
-	putchar('\n');
+	printf("%d\n", sum);
 	return (0);
 }
