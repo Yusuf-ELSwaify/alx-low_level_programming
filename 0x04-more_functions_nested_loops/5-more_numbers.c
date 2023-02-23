@@ -19,7 +19,7 @@ void more_numbers(void)
 	int i = 0, num = 0;
 
 	while (i++ < 10)
-	{
+	{	num = 0;
 		while (num <= 14)
 			print_number(num++);
 
