@@ -25,7 +25,8 @@ int main(void)
 	const int below = 1024;
 	int multiple3 = sum_of_multiples(3, below);
 	int multiple5 = sum_of_multiples(5, below);
+	int multiple_of_both = sum_of_multiples(5 * 3, below);
 
-	printf("%d\n", multiple3 + multiple5);
+	printf("%d\n", multiple3 + multiple5 - multiple_of_both);
 	return (0);
 }
