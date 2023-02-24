@@ -17,9 +17,9 @@ void print_number(int num)
  */
 int main(void)
 {
-	int i = 0;
+	int i = 1;
 
-	while (i++ < 100)
+	while (1)
 	{
 		if (i % 3 == 0)
 		{
@@ -39,6 +39,8 @@ int main(void)
 		{
 			print_number(i);
 		}
+		if (i++ == 100)
+			break;
 		putchar(' ');
 	}
 	putchar('\n');
