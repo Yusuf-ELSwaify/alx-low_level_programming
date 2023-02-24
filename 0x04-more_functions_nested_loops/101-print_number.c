@@ -8,7 +8,7 @@ void print_number(int num)
 {
 	if (num < 0)
 	{
-		print_number(-n);
+		print_number(-num);
 		return;
 	}
 	if (num > 9)
