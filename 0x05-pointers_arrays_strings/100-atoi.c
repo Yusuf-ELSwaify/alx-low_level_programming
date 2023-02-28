@@ -4,11 +4,10 @@
  * @dest: integer to add in it
  * @number: the character we need to add in the integer
  */
-void add_number(int *dest, char number)
+void add_number(unsigned int *dest, char number)
 {
 	*dest *= 10;
 	*dest += number - '0';
-	/*printf("yyyyyyyyyyyyy%d xxxx %c  %d\n",number,number,*dest);*/
 }
 
 /**
@@ -18,7 +17,8 @@ void add_number(int *dest, char number)
  */
 int _atoi(char *s)
 {
-	int i = 0, number = 0, sign = 1;
+	int i = 0, sign = 1;
+	unsigned int number = 0;
 
 	while (s[i] != '\0')
 	{
