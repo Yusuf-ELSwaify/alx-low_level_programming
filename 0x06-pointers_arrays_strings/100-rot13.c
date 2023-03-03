@@ -9,9 +9,11 @@ char *rot13(char *s)
 
 	while (s[++i] != 0)
 	{
-		if ((s[i] >= 'a' && s[i] <= 'z' - 13) || (s[i] >= 'A' && s[i] <= 'Z' - 13))
+		if ((s[i] >= 'a' && s[i] <= 'z' - 13)
+				|| (s[i] >= 'A' && s[i] <= 'Z' - 13))
 			s[i] += 13;
-		else if ((s[i] > 'z' - 13 && s[i] <= 'z') || (s[i] > 'Z' - 13 && s[i] <= 'Z'))
+		else if ((s[i] > 'z' - 13 && s[i] <= 'z')
+				|| (s[i] > 'Z' - 13 && s[i] <= 'Z'))
 			s[i] -= 13;
 	}
 	return (s);
