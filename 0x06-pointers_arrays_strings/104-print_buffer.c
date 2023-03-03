@@ -17,10 +17,8 @@ void print_buffer(char *b, int size)
 
 			if (j >= size)
 				printf(" %4s", "");
-			/*
-			 *  else if (j + 1 >= size)
-			 *	printf(" %02x%2s", b[j], "");
-			 */
+			else if (j + 1 >= size)
+				printf(" %02x%2s", b[j], "");
 			else
 				printf(" %02x%02x", b[j], b[j + 1]);
 
