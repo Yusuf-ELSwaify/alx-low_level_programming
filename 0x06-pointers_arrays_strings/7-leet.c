@@ -10,10 +10,12 @@ char *leet(char *s)
 
 	while (s[++i] != 0)
 	{
-		for (int j = 0; j <= 7; j++)
+		int j = 0;
+		while (j <= 7)
 		{
-			if (str[i] == leet[j] || str[i] - 32 == leet[j])
-				str[i] = j + '0';
+			if (s[i] == leet[j] || s[i] - 32 == leet[j])
+				s[i] = j + '0';
+			j++;
 		}
 	}
 	return (s);
