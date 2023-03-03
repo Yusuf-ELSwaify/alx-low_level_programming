@@ -5,16 +5,18 @@
  */
 char *rot13(char *s)
 {
-	int i = -1;
+	int i = -1, temp;
 
 	while (s[++i] != 0)
 	{
 		if ((s[i] >= 'a' && s[i] <= 'z')
 				|| (s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			s[i] += 13;
-			if (s[i] > 'z')
-				s[i] -= 26;
+			temp = s[i];
+			temp += 13;
+			if ((temp > 'z') || (temp > 'Z' && temp < 'Z' + 13))
+				temp -= 26;
+			s[i] = temp;
 		}
 	}
 	return (s);
