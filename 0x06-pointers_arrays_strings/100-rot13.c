@@ -5,18 +5,21 @@
  */
 char *rot13(char *s)
 {
-	int i = -1, temp;
+	int i = -1, j;
+
+	char rot0[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (s[++i] != 0)
 	{
-		if ((s[i] >= 'a' && s[i] <= 'z')
-				|| (s[i] >= 'A' && s[i] <= 'Z'))
+		j = -1;
+		while (rot0[++j])
 		{
-			temp = s[i];
-			temp += 13;
-			if ((temp > 'z') || (temp > 'Z' && temp < 'Z' + 13))
-				temp -= 26;
-			s[i] = temp;
+			if (s[i] == rot0[j])
+			{
+				s[i] = rot13[j];
+				break;
+			}
 		}
 	}
 	return (s);
