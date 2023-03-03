@@ -27,7 +27,7 @@ void print_buffer(char *b, int size)
 		putchar(' ');
 		j = i - 1;
 		while (++j - i < 10)
-			putchar((j < size) ? ' '
+			putchar((j >= size) ? ' '
 					: (b[j] >= 31 && b[j] <= 126) ? b[j] : '.');
 		putchar('\n');
 		i += 10;
