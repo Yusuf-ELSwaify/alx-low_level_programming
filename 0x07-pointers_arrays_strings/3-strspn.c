@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 			if (accept[i] == *s)
-			{	
+			{
 				segment_bytes++;
 				break;
 			}
