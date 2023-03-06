@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * _strstr -  function locates the first occurrence in the string haystack
  * of string accept
@@ -23,6 +22,6 @@ char *_strstr(char *haystack, char *needle)
 			jj++;
 		}
 		i++;
-	}printf("  sss \n");
+	}
 	return ('\0');
 }
