@@ -10,10 +10,10 @@ void print_diagsums(int *a, int size)
 
 	while (++i < size)
 		sum += *(a + (i * size) + i);
-	printf("%d, ",sum);
+	printf("%d, ", sum);
 	sum = 0;
 	i = -1;
 	while (++i < size)
-		sum += *(a + (i * size) + (size - i -1));
-	printf("%d\n",sum);
+		sum += *(a + (i * size) + (size - i - 1));
+	printf("%d\n", sum);
 }
