@@ -14,7 +14,7 @@ int _prime(int n, int divisor)
 	 */
 	if (n % divisor == 0 || n % (divisor + 2) == 0)
 		return (0);
-	return (_sqrt(n, divisor + 6));
+	return (_prime(n, divisor + 6));
 }
 /**
  * is_prime_number - check if number is prime
@@ -25,5 +25,5 @@ int is_prime_number(int n)
 {
 	if (n < 2 || n % 2 == 0 || n % 3 == 0)
 		return (0);
-	return (_sqrt(n, 5));
+	return (_prime(n, 5));
 }
