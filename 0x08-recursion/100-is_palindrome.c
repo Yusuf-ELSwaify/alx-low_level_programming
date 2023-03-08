@@ -1,4 +1,16 @@
 /**
+ * get_length - get string length
+ * @s: string
+ * @length: string_length
+ * Return: string length
+ */
+int get_length(char *s, int length)
+{
+	if (!s[length])
+		return (0);
+	return (1 + get_length(s, length + 1));
+}
+/**
  * palindrome - check if string is palindrome
  * @s: string
  * @right: right pointer to check
@@ -20,9 +32,7 @@ int palindrome(char *s, int right, int left)
  */
 int is_palindrome(char *s)
 {
-	int s_length = -1;
+	int s_length = get_length(s, 0);
 
-	while (s[++s_length])
-		;
 	return (palindrome(s, 0, s_length - 1));
 }
