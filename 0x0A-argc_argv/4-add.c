@@ -8,18 +8,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 1, sum = 0;
+	int i = 1, sum = 0, j;
 
 	while (i < argc)
 	{
-		int temp = atoi(argv[i]);
-
-		if (temp == 0 && argv[i][0] != '0' && argv[i][1] == '\0')
+		j = 0;
+		while (argv[i][j] != 0)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
-		sum += temp;
+		sum += atoi(argv[i]);
 		i++;
 	}
 	printf("%d\n", sum);
