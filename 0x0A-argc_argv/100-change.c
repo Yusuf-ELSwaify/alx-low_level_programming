@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	int coins[] = {25, 10, 5, 2, 1};
 	int i = 0, coins_number = 0, amount;
 
-	if (argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
