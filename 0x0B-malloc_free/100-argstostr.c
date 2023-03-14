@@ -19,6 +19,7 @@ char *argstostr(int ac, char **av)
 			;
 		l += j;
 	}
+	l++;
 	ptr = (char *)malloc(l * sizeof(char));
 
 	if (!ptr)
