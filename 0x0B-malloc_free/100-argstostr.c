@@ -7,10 +7,10 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i = 0, j, l = 0;
+	int i = -1, j, l = 0;
 	char *ptr;
 
-	if (ac < 2 || !av)
+	if (!av)
 		return (NULL);
 	while (++i < ac)
 	{
@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 
 	if (!ptr)
 		return (NULL);
-	i = 0, l = 0;
+	i = -1, l = 0;
 	while (++i < ac)
 	{
 		j = 0;
