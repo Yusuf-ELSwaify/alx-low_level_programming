@@ -6,6 +6,7 @@
  */
 int get_word_count(char *str)
 {
+	int i = 0, wi = 0;
 	while (1)
 	{
 		while (str[i] == ' ')
