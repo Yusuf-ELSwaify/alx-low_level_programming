@@ -1,8 +1,9 @@
 #include <stdlib.h>
 /**
- * _calloc -  allocates memory for an array
- * @nmemb: the number of elements of array
- * @size:size of each element
+ * _realloc - reallocates a memory block
+ * @ptr: the old pointer
+ * @old_size: memory old size
+ * @new_size: the new size to be allocated
  * Return: a pointer to a newly allocated space in memory
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -17,7 +18,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	if (new_size == old_size)
 		return (ptr);
-	if(new_size < old_size)
+	if (new_size < old_size)
 	{
 		free(((char *)ptr) + new_size);
 		return (ptr);
