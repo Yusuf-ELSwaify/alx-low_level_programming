@@ -20,7 +20,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 
 	r[max_length] = '\0';
-
+	i++;
 	while (i <= max_length)
 	{
 		int digit1 = (i <= len1) ? (n1[len1 - i] - '0') : 0;
