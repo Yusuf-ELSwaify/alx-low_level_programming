@@ -70,13 +70,14 @@ char *infinite_multiply(char *n1, char *n2, char *r, int size_r)
 int main(int argc, char *argv[])
 {
 	int size_r = 2000, i, j;
-	char r[2000];
+	char *r;
 
 	if (argc < 3)
 	{
 		_puts("Error");
 		exit(98);
 	}
+	r = malloc(sizeof(char) * size_r);
 	infinite_multiply(argv[1], argv[2], r, size_r);
 	i = size_r - 1;
 	while (i > 0 && r[i] == '0')
