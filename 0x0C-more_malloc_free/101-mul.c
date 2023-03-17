@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 /**
@@ -23,12 +22,20 @@ void _puts(char *str)
  */
 char *infinite_multiply(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = 0, len2 = 0, i_n1 = 0, i_n2 = 0, i = 0, j;
+	int len1 = -1, len2 = -1, i_n1 = 0, i_n2 = 0, i = 0, j;
 
 	while (n1[++len1] != '\0')
-		;
+		if (n1[len1] < '0' || n1[len1] > '9')
+		{
+			_puts("Error");
+			exit(98);
+		}
 	while (n2[++len2] != '\0')
-		;
+		if (n2[len2] < '0' || n2[len2] > '9')
+		{
+			_puts("Error");
+			exit(98);
+		}
 	if (len1 == 0 || len2 == 0 || size_r < len1 + len2)
 		return (0);
 	while (i < size_r)
@@ -60,14 +67,17 @@ char *infinite_multiply(char *n1, char *n2, char *r, int size_r)
 }
 int main(int argc, char *argv[])
 {
-	int size_r = 100, i, j;
-	char r[100];
+	int size_r = 1000, i, j;
+	char r[1000];
 
 	if (argc < 3)
-		return (1);
+	{
+		_puts("Error");
+		exit(98);
+	}
 	infinite_multiply(argv[1], argv[2], r, size_r);
 	i = size_r - 1;
-	while (i >= 0 && r[i] == '0')
+	while (i > 0 && r[i] == '0')
 	{
 		r[i] = '\0';
 		i--;
