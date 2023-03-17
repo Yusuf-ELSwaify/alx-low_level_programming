@@ -77,7 +77,6 @@ int main(int argc, char *argv[])
 	if (argc < 3)
 	{
 		_puts("Error");
-		free(r);
 		exit(98);
 	}
 	r = malloc(sizeof(char) * size_r);
