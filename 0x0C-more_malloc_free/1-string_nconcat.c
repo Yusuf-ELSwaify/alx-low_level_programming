@@ -17,15 +17,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			i++;
 	if (s2)
 	{
-		while (s2[j++])
-			;
+		while (s2[j])
+			j++;
 
-		j = n < j ? (n + 1) : j;
+		j = n < j ? (n) : j;
 	}
-	else if (s1)
-		i += 1;
-	if (i + j)
-		ptr = (char *)malloc((i + j + 1) * sizeof(char));
+	ptr = (char *)malloc((i + j + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	if (s1)
