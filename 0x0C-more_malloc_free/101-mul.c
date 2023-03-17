@@ -95,5 +95,6 @@ int main(int argc, char *argv[])
 		j++;
 	}
 	_puts(r);
+	free(r);
 	return (0);
 }
