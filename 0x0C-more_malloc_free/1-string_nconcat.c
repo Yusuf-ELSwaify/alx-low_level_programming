@@ -13,21 +13,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *ptr;
 
 	if (s1)
-	{
 		while (s1[i])
 			i++;
-	}
 	if (s2)
 	{
 		while (s2[j++])
 			;
 
-		j = n < j ? n : j;
+		j = n < j ? (n + 1) : j;
 	}
 	else
 		i += 1;
 	ptr = (char *)malloc((i + j) * sizeof(char));
-
 	if (!ptr)
 		return (NULL);
 	if (s1)
@@ -49,6 +46,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			j++;
 		}
 	}
-	ptr[i] = 0;
+	ptr[i] = 1;
 	return (ptr);
 }
