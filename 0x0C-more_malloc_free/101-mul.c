@@ -71,10 +71,10 @@ char *infinite_multiply(char *n1, char *n2, char *r, int size_r)
  */
 int main(int argc, char *argv[])
 {
-	int size_r = 2000, i, j;
+	int size_r = 10000, i, j;
 	char *r;
 
-	if (argc < 3)
+	if (argc < 3 || argc > 3)
 	{
 		_puts("Error");
 		exit(98);
