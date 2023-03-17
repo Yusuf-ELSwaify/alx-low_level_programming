@@ -13,7 +13,7 @@ void _puts(char *str)
 	_putchar('\n');
 }
 /**
- * infinite_multiply - multiplies two numbers
+ * infinite_multiply - multiplies two postive numbers
  * @n1: 1st string
  * @n2: 2nd string
  * @r: the result
@@ -46,7 +46,6 @@ char *infinite_multiply(char *n1, char *n2, char *r, int size_r)
 		int n1_digit = n1[i] - '0';
 
 		i_n2 = 0;
-
 		for (j = len2 - 1; j >= 0; j--)
 		{
 			int n2_digit = n2[j] - '0';
@@ -56,19 +55,22 @@ char *infinite_multiply(char *n1, char *n2, char *r, int size_r)
 			r[i_n1 + i_n2] = (sum % 10) + '0';
 			i_n2++;
 		}
-
 		if (carry > 0)
-		{
 			r[i_n1 + i_n2] += carry;
-		}
 		i_n1++;
 	}
 	return (r);
 }
+/**
+ * main - Entry point
+ * @argc: number of arguments
+ * @argv: arguments
+ * Return: 0 if success
+ */
 int main(int argc, char *argv[])
 {
-	int size_r = 1000, i, j;
-	char r[1000];
+	int size_r = 2000, i, j;
+	char r[2000];
 
 	if (argc < 3)
 	{
