@@ -28,12 +28,14 @@ char *infinite_multiply(char *n1, char *n2, char *r, int size_r)
 		if (n1[len1] < '0' || n1[len1] > '9')
 		{
 			_puts("Error");
+			free(r);
 			exit(98);
 		}
 	while (n2[++len2] != '\0')
 		if (n2[len2] < '0' || n2[len2] > '9')
 		{
 			_puts("Error");
+			free(r);
 			exit(98);
 		}
 	if (len1 == 0 || len2 == 0 || size_r < len1 + len2)
@@ -75,6 +77,7 @@ int main(int argc, char *argv[])
 	if (argc < 3)
 	{
 		_puts("Error");
+		free(r);
 		exit(98);
 	}
 	r = malloc(sizeof(char) * size_r);
