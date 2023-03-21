@@ -7,14 +7,12 @@
  */
 void print_dog(struct dog *d)
 {
-	char c_age[20];
 	if (!d)
 		return;
-	sprintf(c_age, "%f",d->age);
-	printf("Name: %s\n"
-		"Age: %s\n"
-		"Owner: %s\n"
-			, d->name ? d->name : "(nil)"
-			, d->age > 0 ? c_age : "(nil)"
-			, d->owner ? d->owner : "(nil)");
+	printf("Name: %s\n", d->name ? d->name : "(nil)");
+	if (d->age < 0)
+		printf("Age: %s\n", "(nil)");
+	else
+		printf("Age: %f\n", d->age);
+	printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
 }
