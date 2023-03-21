@@ -1,9 +1,10 @@
 #include "dog.h"
+#include <stdio.h>
 /**
  * print_dog - print variable of type dog
  * @d: object of type dog to be printed
  */
-void print_dog(struct dog *d);
+void print_dog(struct dog *d)
 {
 	if (!d)
 		return;
