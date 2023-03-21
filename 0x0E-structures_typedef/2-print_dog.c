@@ -11,5 +11,5 @@ void print_dog(struct dog *d);
 	printf("Name: %s\n"
 		"Age: %f\n"
 		"Owner: %s\n"
-			,d->name, d->age, d->owner);
+			, d->name, d->age, d->owner);
 }
