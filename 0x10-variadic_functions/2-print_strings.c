@@ -12,7 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 
 	if (n <= 0)
-		return;
+		printf("\n"), return;
 
 	va_start(strings, n);
 	while (1)
@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		printf("%s", (!s ? "(nil)" : s));
 		if (++i == n)
 			break;
-		printf("%s ", separator);
+		printf("%s", separator ? separator : "");
 	}
 	putchar('\n');
 	va_end(strings);
