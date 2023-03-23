@@ -18,8 +18,8 @@ int main(int argc, char **argv)
 	if (bytes < 0)
 		printf("Error\n"), exit(2);
 
-	while (i < bytes)
+	while (i < bytes - 1)
 		printf("%02hhx ", address[i++]);
-	putchar('\n');
+	printf("%02hhx\n", address[i++]);
 	return (0);
 }
