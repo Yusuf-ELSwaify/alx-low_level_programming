@@ -1,15 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
-/**
- * struct Ftype - Struct op
- * @c: Parameter
- * @f: The function associated
- */
-typedef struct Ftype
-{
-	char tc;
-	void (*f)(va_list);
-} ftype;
+#include "variadic_functions.h"
 /**
  * tchar - prints the char variadic argument
  * @list: variadic list
