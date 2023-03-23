@@ -65,10 +65,10 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				farray[j].f(list);
+				separator = ", ";
 			}
 			j++;
 		}
-		separator = ", ";
 	}
 	putchar('\n');
 	va_end(list);
