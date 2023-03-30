@@ -3,6 +3,7 @@
 /**
  * add_node - add an element to the list
  * @head: pointer to the first node in list
+ * @str: the string to added to the new node
  * Return: pointer to the new head
  */
 list_t *add_node(list_t **head, const char *str)
@@ -21,7 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	while (str[len])
 		len++;
-	new_head->len = strlen(str);
+	new_head->len = len;
 	new_head->str = new_str;
 	new_head->next = *head;
 	*head = new_head;
