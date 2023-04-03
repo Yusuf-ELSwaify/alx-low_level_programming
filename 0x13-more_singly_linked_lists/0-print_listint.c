@@ -5,7 +5,7 @@
  * @h: pointer to the first node in list
  * Return: the number of nodes
  */
-size_t print_listint(const listiint_t *h)
+size_t print_listint(const listint_t *h)
 {
 	size_t count = 0;
 
