@@ -1,7 +1,6 @@
 #include "lists.h"
-#include <stdio.h>
 /**
- * get_looped_len - finds the loop in a linked list
+ * get_looped_count - finds the loop in a linked list
  * @head: pointer to the first node in list
  * Return: The number of nodes.
  */
@@ -37,8 +36,8 @@ int get_looped_count(listint_t *head)
 	return (count);
 }
 /**
- * print_listint_safe - Prints a list safe
- * @head: pointer to the first node in list
+ * free_listint_safe - Free the list safe
+ * @h: pointer to the address of the first node in list
  * Return: The number of nodes in the list
  */
 size_t free_listint_safe(listint_t **h)
