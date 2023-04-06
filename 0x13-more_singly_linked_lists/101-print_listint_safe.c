@@ -3,7 +3,7 @@
 /**
  * get_looped_len - finds the loop in a linked list
  * @head: pointer to the first node in list
- * Return: The number of nodes.
+ * Return: The number of unique nodes in looped list or 0 if not looped
  */
 int get_looped_len(const listint_t *head)
 {
@@ -51,6 +51,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
+			n++;
 		}
 	else
 	{
