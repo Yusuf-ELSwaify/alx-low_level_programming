@@ -2,7 +2,7 @@
 /**
  * get_looped_count - finds the loop in a linked list
  * @head: pointer to the first node in list
- * Return: The number of nodes.
+ * Return: The number of unique nodes in looped list or 0 if not looped
  */
 int get_looped_count(listint_t *head)
 {
@@ -52,6 +52,7 @@ size_t free_listint_safe(listint_t **h)
 			tmp = (*h)->next;
 			free(*h);
 			*h = tmp;
+			n++;
 		}
 	else
 	{
