@@ -12,8 +12,9 @@ int create_file(const char *filename, char *text_content)
 
 	if (!filename)
 		return (-1);
-	while (text_content[len])
-		++len;
+	if (text_content)
+		while (text_content[len])
+			++len;
 	file = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 	if (file == -1)
 		return (-1);
